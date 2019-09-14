@@ -9,7 +9,15 @@ blocked_sites = ['www.facebook.com', 'facebook.com', 'www.twitter.com',
 
 while True:
     if dt(dt.now().year, dt.now().month, dt.now().day, 8) < dt.now() < dt(dt.now().year, dt.now().month, dt.now().day, 17):
-        print("Working hours...")
+        #Working hours
+        with open(test_host, 'r+') as file:
+            content = file.read()
+            for website in blocked_sites:
+                if website in content:
+                    pass
+                else:
+                    file.write('\n{} {}'.format(redirect, website))
     else:
-        print("Offline...")
+        #Offline hours
+        print('Offline hours')
     time.sleep(10)
