@@ -19,5 +19,11 @@ while True:
                     file.write('\n{} {}'.format(redirect, website))
     else:
         #Offline hours
-        print('Offline hours')
+        with open(test_host, 'r+') as file:
+            content = file.readlines()
+            file.seek(0)
+            for line in content:
+                if not any(website in line for website in blocked_sites):
+                    file.write(line)
+            file.truncate()
     time.sleep(10)
