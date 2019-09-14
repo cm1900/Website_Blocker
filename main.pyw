@@ -1,7 +1,10 @@
+#To use, test_host must be replaced with host_path
+#and command window must be opened as administrator
+
 import time
 from datetime import datetime as dt
 
-hosts_path = r'C:\Windows\System32\drivers\etc\hosts'
+host_path = r'C:\Windows\System32\drivers\etc\hosts'
 test_host = 'hosts'
 redirect = '127.0.0.1'
 blocked_sites = ['www.facebook.com', 'facebook.com', 'www.twitter.com',
