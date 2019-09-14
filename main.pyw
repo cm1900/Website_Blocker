@@ -5,7 +5,7 @@ import time
 from datetime import datetime as dt
 
 host_path = r'C:\Windows\System32\drivers\etc\hosts'
-test_host = 'hosts'
+test_host = r'C:\Users\Christino\OneDrive\Documents\Website_Blocker\hosts'
 redirect = '127.0.0.1'
 blocked_sites = ['www.facebook.com', 'facebook.com', 'www.twitter.com',
 'twitter.com']
